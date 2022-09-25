@@ -1,0 +1,138 @@
+:root {
+  --main-color: rgb(253, 253, 255);
+  --Sec-color: rgb(4, 51, 95);
+  --third-color: rgb(139, 135, 168);
+  --nav-back: rgb(10, 23, 83);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+/* end Media Queries */
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 760px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end Media Queries */
+
+nav {
+  width: 100%;
+  height: 90px;
+  background-color: var(--nav-back);
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 30px;
+}
+
+.container i {
+  display: none;
+  font-size: 35px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.container ul {
+}
+.container ul li {
+  display: inline-block;
+}
+
+.container ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--main-color);
+  font-size: 19px;
+  margin-left: 25px;
+}
+.container h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+.container ul li a:hover {
+  color: rgb(59, 139, 214);
+}
+
+#Check {
+  display: none;
+}
+
+/* start nav media Quaries  */
+
+@media (max-width: 768px) {
+  .container ul {
+    display: none;
+  }
+  .container i {
+    display: block;
+  }
+
+  .container ul {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 460px;
+    top: 90px;
+    left: 100%;
+    background-color: var(--Sec-color);
+    padding: 10px 0;
+    transition: 0.5s;
+  }
+  .container ul li {
+    display: block;
+    padding: 25px;
+    text-align: center;
+  }
+  .container ul li a {
+    font-size: 18px;
+  }
+  .container ul li:not(:last-child) {
+    border-bottom: 2px solid var(--third-color);
+  }
+
+  #Check:checked ~ ul {
+    left: 0;
+  }
+  #Check:checked ~ .Checkbtn i {
+    color: red;
+  }
+}
+
+/* end nav media Quaries  */
+
+/* end nav  */
+
+/* start section  */
+section {
+  background-image: url(/12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 90px);
+}
+/* End section  */
